@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MardisEngine_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="REAL_STATE_2_CORE">
+          <Key>
+            <PropertyRef Name="_URI" />
+          </Key>
+          <Property Name="_URI" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_CREATOR_URI_USER" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_CREATION_DATE" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="_LAST_UPDATE_URI_USER" Type="nvarchar" MaxLength="80" />
+          <Property Name="_LAST_UPDATE_DATE" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="_MODEL_VERSION" Type="int" />
+          <Property Name="_UI_VERSION" Type="int" />
+          <Property Name="_IS_COMPLETE" Type="bit" />
+          <Property Name="_SUBMISSION_DATE" Type="datetime2" Precision="7" />
+          <Property Name="_MARKED_AS_COMPLETE_DATE" Type="datetime2" Precision="7" />
+          <Property Name="RUTA_COD" Type="nvarchar" MaxLength="255" />
+          <Property Name="RUTA_EXISTE" Type="nvarchar" MaxLength="255" />
+          <Property Name="OBSERVACIONES_COORD_ACC" Type="decimal" Precision="38" Scale="10" />
+          <Property Name="OBSERVACIONES_COORD_LAT" Type="decimal" Precision="38" Scale="10" />
+          <Property Name="OBSERVACIONES_COORD_LNG" Type="decimal" Precision="38" Scale="10" />
+          <Property Name="RUTA_NUM_RUTA" Type="nvarchar" MaxLength="255" />
+          <Property Name="IMEI_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="OBSERVACIONES_COORD_ALT" Type="decimal" Precision="38" Scale="10" />
+          <Property Name="START" Type="datetime2" Precision="7" />
+          <Property Name="END" Type="datetime2" Precision="7" />
+          <Property Name="META_INSTANCE_ID" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BLB">
+          <Key>
+            <PropertyRef Name="_URI" />
+          </Key>
+          <Property Name="_URI" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_CREATOR_URI_USER" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_CREATION_DATE" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="_LAST_UPDATE_URI_USER" Type="nvarchar" MaxLength="80" />
+          <Property Name="_LAST_UPDATE_DATE" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="_TOP_LEVEL_AURI" Type="nvarchar" MaxLength="80" />
+          <Property Name="VALUE" Type="varbinary(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BN">
+          <Key>
+            <PropertyRef Name="_URI" />
+          </Key>
+          <Property Name="_URI" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_CREATOR_URI_USER" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_CREATION_DATE" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="_LAST_UPDATE_URI_USER" Type="nvarchar" MaxLength="80" />
+          <Property Name="_LAST_UPDATE_DATE" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="_PARENT_AURI" Type="nvarchar" MaxLength="80" />
+          <Property Name="_ORDINAL_NUMBER" Type="int" Nullable="false" />
+          <Property Name="_TOP_LEVEL_AURI" Type="nvarchar" MaxLength="80" />
+          <Property Name="UNROOTED_FILE_PATH" Type="nvarchar(max)" />
+          <Property Name="CONTENT_TYPE" Type="nvarchar" MaxLength="80" />
+          <Property Name="CONTENT_LENGTH" Type="int" />
+          <Property Name="CONTENT_HASH" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_REF">
+          <Key>
+            <PropertyRef Name="_URI" />
+          </Key>
+          <Property Name="_URI" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_CREATOR_URI_USER" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_CREATION_DATE" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="_LAST_UPDATE_URI_USER" Type="nvarchar" MaxLength="80" />
+          <Property Name="_LAST_UPDATE_DATE" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="_DOM_AURI" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_SUB_AURI" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="_TOP_LEVEL_AURI" Type="nvarchar" MaxLength="80" />
+          <Property Name="PART" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MardisEngine_TestModelStoreContainer">
+          <EntitySet Name="REAL_STATE_2_CORE" EntityType="Self.REAL_STATE_2_CORE" Schema="MardisAggregate" store:Type="Tables" />
+          <EntitySet Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BLB" EntityType="Self.REAL_STATE_2_OBSERVACIONES_EXT_IMG_BLB" Schema="MardisAggregate" store:Type="Tables" />
+          <EntitySet Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BN" EntityType="Self.REAL_STATE_2_OBSERVACIONES_EXT_IMG_BN" Schema="MardisAggregate" store:Type="Tables" />
+          <EntitySet Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_REF" EntityType="Self.REAL_STATE_2_OBSERVACIONES_EXT_IMG_REF" Schema="MardisAggregate" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MardisEngine_TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="REAL_STATE_2_CORE">
+          <Key>
+            <PropertyRef Name="C_URI" />
+          </Key>
+          <Property Name="C_URI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_CREATOR_URI_USER" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_CREATION_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="C_LAST_UPDATE_URI_USER" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="C_LAST_UPDATE_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="C_MODEL_VERSION" Type="Int32" />
+          <Property Name="C_UI_VERSION" Type="Int32" />
+          <Property Name="C_IS_COMPLETE" Type="Boolean" />
+          <Property Name="C_SUBMISSION_DATE" Type="DateTime" Precision="7" />
+          <Property Name="C_MARKED_AS_COMPLETE_DATE" Type="DateTime" Precision="7" />
+          <Property Name="RUTA_COD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RUTA_EXISTE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OBSERVACIONES_COORD_ACC" Type="Decimal" Precision="38" Scale="10" />
+          <Property Name="OBSERVACIONES_COORD_LAT" Type="Decimal" Precision="38" Scale="10" />
+          <Property Name="OBSERVACIONES_COORD_LNG" Type="Decimal" Precision="38" Scale="10" />
+          <Property Name="RUTA_NUM_RUTA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IMEI_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OBSERVACIONES_COORD_ALT" Type="Decimal" Precision="38" Scale="10" />
+          <Property Name="START" Type="DateTime" Precision="7" />
+          <Property Name="END" Type="DateTime" Precision="7" />
+          <Property Name="META_INSTANCE_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BLB">
+          <Key>
+            <PropertyRef Name="C_URI" />
+          </Key>
+          <Property Name="C_URI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_CREATOR_URI_USER" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_CREATION_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="C_LAST_UPDATE_URI_USER" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="C_LAST_UPDATE_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="C_TOP_LEVEL_AURI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="VALUE" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BN">
+          <Key>
+            <PropertyRef Name="C_URI" />
+          </Key>
+          <Property Name="C_URI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_CREATOR_URI_USER" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_CREATION_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="C_LAST_UPDATE_URI_USER" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="C_LAST_UPDATE_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="C_PARENT_AURI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="C_ORDINAL_NUMBER" Type="Int32" Nullable="false" />
+          <Property Name="C_TOP_LEVEL_AURI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="UNROOTED_FILE_PATH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CONTENT_TYPE" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="CONTENT_LENGTH" Type="Int32" />
+          <Property Name="CONTENT_HASH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_REF">
+          <Key>
+            <PropertyRef Name="C_URI" />
+          </Key>
+          <Property Name="C_URI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_CREATOR_URI_USER" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_CREATION_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="C_LAST_UPDATE_URI_USER" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="C_LAST_UPDATE_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="C_DOM_AURI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_SUB_AURI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_TOP_LEVEL_AURI" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="PART" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MardisEngine_TestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="REAL_STATE_2_CORE" EntityType="Self.REAL_STATE_2_CORE" />
+          <EntitySet Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BLB" EntityType="Self.REAL_STATE_2_OBSERVACIONES_EXT_IMG_BLB" />
+          <EntitySet Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BN" EntityType="Self.REAL_STATE_2_OBSERVACIONES_EXT_IMG_BN" />
+          <EntitySet Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_REF" EntityType="Self.REAL_STATE_2_OBSERVACIONES_EXT_IMG_REF" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MardisEngine_TestModelStoreContainer" CdmEntityContainer="MardisEngine_TestEntities">
+          <EntitySetMapping Name="REAL_STATE_2_CORE">
+            <EntityTypeMapping TypeName="MardisEngine_TestModel.REAL_STATE_2_CORE">
+              <MappingFragment StoreEntitySet="REAL_STATE_2_CORE">
+                <ScalarProperty Name="C_URI" ColumnName="_URI" />
+                <ScalarProperty Name="C_CREATOR_URI_USER" ColumnName="_CREATOR_URI_USER" />
+                <ScalarProperty Name="C_CREATION_DATE" ColumnName="_CREATION_DATE" />
+                <ScalarProperty Name="C_LAST_UPDATE_URI_USER" ColumnName="_LAST_UPDATE_URI_USER" />
+                <ScalarProperty Name="C_LAST_UPDATE_DATE" ColumnName="_LAST_UPDATE_DATE" />
+                <ScalarProperty Name="C_MODEL_VERSION" ColumnName="_MODEL_VERSION" />
+                <ScalarProperty Name="C_UI_VERSION" ColumnName="_UI_VERSION" />
+                <ScalarProperty Name="C_IS_COMPLETE" ColumnName="_IS_COMPLETE" />
+                <ScalarProperty Name="C_SUBMISSION_DATE" ColumnName="_SUBMISSION_DATE" />
+                <ScalarProperty Name="C_MARKED_AS_COMPLETE_DATE" ColumnName="_MARKED_AS_COMPLETE_DATE" />
+                <ScalarProperty Name="RUTA_COD" ColumnName="RUTA_COD" />
+                <ScalarProperty Name="RUTA_EXISTE" ColumnName="RUTA_EXISTE" />
+                <ScalarProperty Name="OBSERVACIONES_COORD_ACC" ColumnName="OBSERVACIONES_COORD_ACC" />
+                <ScalarProperty Name="OBSERVACIONES_COORD_LAT" ColumnName="OBSERVACIONES_COORD_LAT" />
+                <ScalarProperty Name="OBSERVACIONES_COORD_LNG" ColumnName="OBSERVACIONES_COORD_LNG" />
+                <ScalarProperty Name="RUTA_NUM_RUTA" ColumnName="RUTA_NUM_RUTA" />
+                <ScalarProperty Name="IMEI_ID" ColumnName="IMEI_ID" />
+                <ScalarProperty Name="OBSERVACIONES_COORD_ALT" ColumnName="OBSERVACIONES_COORD_ALT" />
+                <ScalarProperty Name="START" ColumnName="START" />
+                <ScalarProperty Name="END" ColumnName="END" />
+                <ScalarProperty Name="META_INSTANCE_ID" ColumnName="META_INSTANCE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BLB">
+            <EntityTypeMapping TypeName="MardisEngine_TestModel.REAL_STATE_2_OBSERVACIONES_EXT_IMG_BLB">
+              <MappingFragment StoreEntitySet="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BLB">
+                <ScalarProperty Name="C_URI" ColumnName="_URI" />
+                <ScalarProperty Name="C_CREATOR_URI_USER" ColumnName="_CREATOR_URI_USER" />
+                <ScalarProperty Name="C_CREATION_DATE" ColumnName="_CREATION_DATE" />
+                <ScalarProperty Name="C_LAST_UPDATE_URI_USER" ColumnName="_LAST_UPDATE_URI_USER" />
+                <ScalarProperty Name="C_LAST_UPDATE_DATE" ColumnName="_LAST_UPDATE_DATE" />
+                <ScalarProperty Name="C_TOP_LEVEL_AURI" ColumnName="_TOP_LEVEL_AURI" />
+                <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BN">
+            <EntityTypeMapping TypeName="MardisEngine_TestModel.REAL_STATE_2_OBSERVACIONES_EXT_IMG_BN">
+              <MappingFragment StoreEntitySet="REAL_STATE_2_OBSERVACIONES_EXT_IMG_BN">
+                <ScalarProperty Name="C_URI" ColumnName="_URI" />
+                <ScalarProperty Name="C_CREATOR_URI_USER" ColumnName="_CREATOR_URI_USER" />
+                <ScalarProperty Name="C_CREATION_DATE" ColumnName="_CREATION_DATE" />
+                <ScalarProperty Name="C_LAST_UPDATE_URI_USER" ColumnName="_LAST_UPDATE_URI_USER" />
+                <ScalarProperty Name="C_LAST_UPDATE_DATE" ColumnName="_LAST_UPDATE_DATE" />
+                <ScalarProperty Name="C_PARENT_AURI" ColumnName="_PARENT_AURI" />
+                <ScalarProperty Name="C_ORDINAL_NUMBER" ColumnName="_ORDINAL_NUMBER" />
+                <ScalarProperty Name="C_TOP_LEVEL_AURI" ColumnName="_TOP_LEVEL_AURI" />
+                <ScalarProperty Name="UNROOTED_FILE_PATH" ColumnName="UNROOTED_FILE_PATH" />
+                <ScalarProperty Name="CONTENT_TYPE" ColumnName="CONTENT_TYPE" />
+                <ScalarProperty Name="CONTENT_LENGTH" ColumnName="CONTENT_LENGTH" />
+                <ScalarProperty Name="CONTENT_HASH" ColumnName="CONTENT_HASH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REAL_STATE_2_OBSERVACIONES_EXT_IMG_REF">
+            <EntityTypeMapping TypeName="MardisEngine_TestModel.REAL_STATE_2_OBSERVACIONES_EXT_IMG_REF">
+              <MappingFragment StoreEntitySet="REAL_STATE_2_OBSERVACIONES_EXT_IMG_REF">
+                <ScalarProperty Name="C_URI" ColumnName="_URI" />
+                <ScalarProperty Name="C_CREATOR_URI_USER" ColumnName="_CREATOR_URI_USER" />
+                <ScalarProperty Name="C_CREATION_DATE" ColumnName="_CREATION_DATE" />
+                <ScalarProperty Name="C_LAST_UPDATE_URI_USER" ColumnName="_LAST_UPDATE_URI_USER" />
+                <ScalarProperty Name="C_LAST_UPDATE_DATE" ColumnName="_LAST_UPDATE_DATE" />
+                <ScalarProperty Name="C_DOM_AURI" ColumnName="_DOM_AURI" />
+                <ScalarProperty Name="C_SUB_AURI" ColumnName="_SUB_AURI" />
+                <ScalarProperty Name="C_TOP_LEVEL_AURI" ColumnName="_TOP_LEVEL_AURI" />
+                <ScalarProperty Name="PART" ColumnName="PART" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

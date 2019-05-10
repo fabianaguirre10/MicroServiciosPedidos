@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="34cab99a47924f6ab1c5dd785687784e" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="Engine_IndustrialModel.ARTICULOS" Width="1.5" PointX="0.75" PointY="6.125" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.Cartera" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.CarteraDis" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.clientes" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.Cobranza" Width="1.5" PointX="9.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.depositos" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.detallefactura" Width="1.5" PointX="3" PointY="7.125" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.Factura" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.MES_DIAS" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.PEDIDOS" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.Ventas_netas_historia" Width="1.5" PointX="11.75" PointY="8.75" />
+        <AssociationConnector Association="Engine_IndustrialModel.FK_detallefactura_detallefactura" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.ChequePagos" Width="1.5" PointX="3" PointY="17" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.PagosDetalles" Width="1.5" PointX="3" PointY="14.125" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.Pagos" Width="1.5" PointX="0.75" PointY="15.25" />
+        <AssociationConnector Association="Engine_IndustrialModel.FK_ChequePagos_Pagos" />
+        <AssociationConnector Association="Engine_IndustrialModel.FK_PagosDetalles_Pagos" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.inventario" Width="1.5" PointX="12.375" PointY="3.875" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.Presupuesto" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.Ventas_netas" Width="1.5" PointX="5.375" PointY="13.75" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.inventariodetalles" Width="1.5" PointX="14.625" PointY="3.75" />
+        <AssociationConnector Association="Engine_IndustrialModel.FK_inventariodetalles_inventario" />
+        <EntityTypeShape EntityType="Engine_IndustrialModel.pedidosItems" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="Engine_IndustrialModel.FK_pedidosItems_PEDIDOS" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
